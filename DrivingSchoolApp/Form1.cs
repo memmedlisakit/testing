@@ -22,11 +22,13 @@ namespace DrivingSchoolApp
             InitializeComponent();
         }
 
+        string connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + getPath() + @"App_Data\Database1.mdf;Integrated Security=True";
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             var name = textBox1.Text;
             var surname = textBox2.Text;
-            string connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+getPath()+@"App_Data\Database1.mdf;Integrated Security=True";
 
             SqlConnection con = new SqlConnection(connection);
             string sql = "INSERT INTO [Table](name, surname) VALUES('" + name + "', '" + surname + "')";
@@ -36,11 +38,11 @@ namespace DrivingSchoolApp
             int effected = com.ExecuteNonQuery();
             con.Close();
             MessageBox.Show(effected + "");
-
+            this.fillAll();
         }
 
 
-        public string getPath()
+        public static string getPath()
         {
             string path = Application.StartupPath;
 
@@ -48,6 +50,23 @@ namespace DrivingSchoolApp
 
             return splited[0];
 
+        }
+
+
+        public void fillAll()
+        {
+            this.textBox3.Text = "";
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            string sql = "SELECT * FROM [Table]";
+            SqlConnection con = new SqlConnection(connection);
+            SqlCommand com = new SqlCommand(sql, con);
+            da.SelectCommand = com;
+            da.Fill(dt);
+            foreach (DataRow item in dt.Rows)
+            {
+                this.textBox3.Text += item["name"] + " -- " + item["surname"] + "\r\n";
+            }
         }
 
     }
