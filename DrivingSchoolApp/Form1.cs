@@ -52,6 +52,7 @@ namespace DrivingSchoolApp
         }
 
 
+
         public void fillAll()
         {
             this.textBox3.Text = "";
@@ -67,6 +68,5 @@ namespace DrivingSchoolApp
                 this.textBox3.Text += item["name"] + " -- " + item["surname"] + "\r\n";
             }
         }
-
     }
 }
