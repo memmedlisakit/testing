@@ -22,3 +22,13 @@ C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\obj\Debug\DrivingS
 C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\obj\Debug\DrivingSchoolApp.csproj.CoreCompileInputs.cache
 C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\obj\Debug\DrivingSchoolApp.exe
 C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\obj\Debug\DrivingSchoolApp.pdb
+C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\bin\Debug\App_Data\SQLiteDB.db
+C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\bin\Debug\EntityFramework.dll
+C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\bin\Debug\System.Data.SQLite.dll
+C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\bin\Debug\EntityFramework.xml
+C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\bin\Debug\System.Data.SQLite.xml
+C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\bin\Debug\System.Data.SQLite.dll.config
