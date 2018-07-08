@@ -5,14 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data;
+using System.Windows.Forms; 
 using System.Data.SqlClient;
 using System.IO;
 using System.Reflection;
 using System.Text.RegularExpressions;
-using System.Data.SQLite;
+using System.Data.Sql;
 
 namespace DrivingSchoolApp
 {
@@ -23,19 +21,19 @@ namespace DrivingSchoolApp
             InitializeComponent();
         }
 
-         //= @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=;Integrated Security=True";
-       string connection = "Data Source="+getPath()+@"App_Data\SQLiteDB.db;Version=3;";
+        string connection  = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+getPath()+ @"App_Data\Database1.mdf;Integrated Security=True";
+        //string connection = "Data Source="+getPath()+@"App_Data\SqlDB.db;Version=3;";
 
         private void button1_Click(object sender, EventArgs e)
         {
             var name = textBox1.Text;
             var surname = textBox2.Text;
 
-            SQLiteConnection con = new SQLiteConnection(connection);
+            SqlConnection con = new SqlConnection(connection);
             con.Open();
-            string sql = "INSERT INTO [Users](name, surname) VALUES('" + name + "', '" + surname + "')";
+            string sql = "INSERT INTO [Table](name, surname) VALUES('" + name + "', '" + surname + "')";
 
-            SQLiteCommand com = new SQLiteCommand(sql, con);
+            SqlCommand com = new SqlCommand(sql, con);
             int effected = com.ExecuteNonQuery();
             con.Close();
             MessageBox.Show(effected + "");
@@ -57,11 +55,11 @@ namespace DrivingSchoolApp
         public void fillAll()
         {
             this.textBox3.Text = "";
-            SQLiteDataAdapter da = new SQLiteDataAdapter();
+            SqlDataAdapter da = new SqlDataAdapter();
             DataTable dt = new DataTable();
-            string sql = "SELECT * FROM [Users]";
-            SQLiteConnection con = new SQLiteConnection(connection);
-            SQLiteCommand com = new SQLiteCommand(sql, con);
+            string sql = "SELECT * FROM [Table]";
+            SqlConnection con = new SqlConnection(connection);
+            SqlCommand com = new SqlCommand(sql, con);
             da.SelectCommand = com;
             da.Fill(dt);
             foreach (DataRow item in dt.Rows)

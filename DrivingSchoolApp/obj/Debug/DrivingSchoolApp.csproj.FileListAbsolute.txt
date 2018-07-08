@@ -32,3 +32,4 @@ C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\bin\Debug\EntityFr
 C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\bin\Debug\System.Data.SQLite.xml
 C:\Users\Sakit\Desktop\Form\DrivingSchoolApp\DrivingSchoolApp\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Sakit\Desktop\DrivingSchoolApp\DrivingSchoolApp\bin\Debug\App_Data\SQLiteDB.db
